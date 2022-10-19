@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1200"
-   version = "2.0"
-   wasCreatedForAppExtension = "YES">
+   LastUpgradeVersion = "1400"
+   wasCreatedForAppExtension = "YES"
+   version = "2.0">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
@@ -15,7 +15,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E0D713CE2496844400173A38"
+               BlueprintIdentifier = "610F55A9261592F8001D3AA0"
                BuildableName = "Fruta macOS Widgets.appex"
                BlueprintName = "Fruta macOS Widgets"
                ReferencedContainer = "container:Fruta.xcodeproj">
@@ -29,9 +29,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E0D712AB24967CC900173A38"
+               BlueprintIdentifier = "610F550826158DE2001D3AA0"
                BuildableName = "Fruta.app"
-               BlueprintName = "Fruta macOS"
+               BlueprintName = "Fruta macOS All"
                ReferencedContainer = "container:Fruta.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -50,19 +50,21 @@
       selectedDebuggerIdentifier = ""
       selectedLauncherIdentifier = "Xcode.IDEFoundation.Launcher.PosixSpawn"
       launchStyle = "0"
+      askForAppToLaunch = "Yes"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
+      enableGPUFrameCaptureMode = "1"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E0D712AB24967CC900173A38"
+            BlueprintIdentifier = "610F550826158DE2001D3AA0"
             BuildableName = "Fruta.app"
-            BlueprintName = "Fruta macOS"
+            BlueprintName = "Fruta macOS All"
             ReferencedContainer = "container:Fruta.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -73,14 +75,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES"
+      askForAppToLaunch = "Yes"
       launchAutomaticallySubstyle = "2">
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "E0D712AB24967CC900173A38"
+            BlueprintIdentifier = "610F550826158DE2001D3AA0"
             BuildableName = "Fruta.app"
-            BlueprintName = "Fruta macOS"
+            BlueprintName = "Fruta macOS All"
             ReferencedContainer = "container:Fruta.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
