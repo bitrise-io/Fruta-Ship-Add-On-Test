@@ -8,33 +8,44 @@ A button to favorite a smoothie, can be placed in a toolbar.
 import SwiftUI
 
 struct SmoothieFavoriteButton: View {
-    @EnvironmentObject private var model: FrutaModel
-    
-    var smoothie: Smoothie?
+    @EnvironmentObject private var model: Model
     
     var isFavorite: Bool {
-        guard let smoothie = smoothie else { return false }
-        return model.favoriteSmoothieIDs.contains(smoothie.id)
+        guard let smoothieID = model.selectedSmoothieID else { return false }
+        return model.favoriteSmoothieIDs.contains(smoothieID)
     }
     
     var body: some View {
         Button(action: toggleFavorite) {
-            Label("Favorite", systemImage: isFavorite ? "heart.fill" : "heart")
+            if isFavorite {
+                Label {
+                    Text("Remove from Favorites", comment: "Toolbar button/menu item to remove a smoothie from favorites")
+                } icon: {
+                    Image(systemName: "heart.fill")
+                }
+            } else {
+                Label {
+                    Text("Add to Favorites", comment: "Toolbar button/menu item to add a smoothie to favorites")
+                } icon: {
+                    Image(systemName: "heart")
+                }
+
+            }
         }
-        .accessibility(label: Text("\(isFavorite ? "Remove from" : "Add to") Favorites"))
+        .disabled(model.selectedSmoothieID == nil)
     }
     
     func toggleFavorite() {
-        guard let smoothie = smoothie else { return }
-        model.toggleFavorite(smoothie: smoothie)
+        guard let smoothieID = model.selectedSmoothieID else { return }
+        model.toggleFavorite(smoothieID: smoothieID)
     }
 }
 
 struct SmoothieFavoriteButton_Previews: PreviewProvider {
     static var previews: some View {
-        SmoothieFavoriteButton(smoothie: .berryBlue)
+        SmoothieFavoriteButton()
             .padding()
             .previewLayout(.sizeThatFits)
-            .environmentObject(FrutaModel())
+            .environmentObject(Model())
     }
 }
